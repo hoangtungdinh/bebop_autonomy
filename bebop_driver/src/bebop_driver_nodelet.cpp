@@ -144,11 +144,11 @@ void BebopDriverNodelet::onInit()
 
   camera_info_msg_ptr_.reset(new sensor_msgs::CameraInfo());
 
-  dynr_serv_ptr_.reset(new dynamic_reconfigure::Server<bebop_driver::BebopArdrone3Config>(private_nh));
+  //dynr_serv_ptr_.reset(new dynamic_reconfigure::Server<bebop_driver::BebopArdrone3Config>(private_nh));
   dynamic_reconfigure::Server<bebop_driver::BebopArdrone3Config>::CallbackType cb =
       boost::bind(&bebop_driver::BebopDriverNodelet::ParamCallback, this, _1, _2);
 
-  dynr_serv_ptr_->setCallback(cb);
+  //dynr_serv_ptr_->setCallback(cb);
 
   try
   {
